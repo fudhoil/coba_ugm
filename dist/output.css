@@ -589,19 +589,6 @@ video {
   }
 }
 
-@keyframes movement{
-  from{
-    opacity:0;
-    transform: translateY(-10px);
-  }
-
-  to{
-    opacity:1;
-    transform: translateY(0);
-  }
-
-}
-
 .absolute {
   position: absolute;
 }
@@ -802,6 +789,10 @@ video {
   max-width: 90px;
 }
 
+.max-w-\[900px\] {
+  max-width: 900px;
+}
+
 .origin-top-left {
   transform-origin: top left;
 }
@@ -851,6 +842,58 @@ video {
 .animate-pulse {
   -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .appearance-none {
@@ -1364,10 +1407,20 @@ video {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@keyframes movement{
+  from{
+    opacity:0;
+    transform: translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
 
 body {
   font-family: sans-serif;
-  animation: movement 1s;
+  animation: movement 0.75s;
 }
 
 .navbar-fixed {
