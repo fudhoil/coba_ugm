@@ -10,194 +10,161 @@
 </head>
 <!-- component -->
     <body class="font-Poppins bg-gray-400">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Comatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UIF | Submition</title>
+    <link rel="icon" type="image" href="dist/img/design/Logo_UIF/favicon.ico" />
+    <link href="dist/output.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </head>
+  <!-- component -->
+  <body class="font-mono bg-gray-400">
     <!-- Container -->
-        <div class="container mx-auto">
-            <div class="flex justify-center px-6 my-12">
-                <!-- Row -->
-                <div class="w-full xl:w-3/4 lg:w-11/12 flex">
-                    <!-- Col -->
-                    <div class="w-full h-auto bg-gradient-to-r from-cyan-500 to-blue-500 hidden lg:block lg:w-7/12 bg-cover rounded-l-lg">
-                        <img src="dist/img/pbb.png" alt="Logo UIF" class="w-1/2 mx-auto my-12 flex justify-center items-center pt-48">
-                    </div>
-                    <!-- Col -->
-                    <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-                        <h3 class="pt-4 text-2xl text-center">Submit Absctract</h3>
-                        <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Title
-                                </label>
-                                <input
-                                        class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="title"
-                                        type="text"
-                                        placeholder="Title"
-                                />
-                            </div>
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Full Name
-                                </label>
-                                <input
-                                        class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="name"
-                                        type="text"
-                                        placeholder="name"
-                                />
-                            </div>
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Institution
-                                </label>
-                                <input
-                                        class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="institution"
-                                        type="text"
-                                        placeholder="Institution"
-                                />
-                            </div>
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Email
-                                </label>
-                                <input
-                                        class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="email"
-                                        type="email"
-                                        placeholder="Email"
-                                />
-                            </div>
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Subteam
-                                </label>
-                                <input
-                                        class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="subteam"
-                                        type="text"
-                                        placeholder="No Phone"
-                                />
-                            </div>
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Student Id
-                                </label>
-                                <input class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                       type="file" id="student" multiple>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Bukti Transfer
-                                </label>
-                                <input class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                       type="file" id="bukti" multiple>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                    Abstract
-                                </label>
-                                <input class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                       type="file" id="abstract" multiple>
-                            </div>
-                            <div class="mb-6 text-center">
-                                <button
-                                        class="w-full px-4 py-2 font-bold text-dark bg-blue-300 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                                        type="button"
-                                >
-                                    Submit
-                                </button>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <div class="container mx-auto">
+      <div class="flex justify-center px-6 my-12">
+        <!-- Row -->
+        <div class="w-full xl:w-3/4 lg:w-11/12 flex">
+          <!-- Col -->
+          <div
+            class="w-full h-auto bg-gradient-to-r from-cyan-500 to-blue-500 hidden lg:block lg:w-7/12 bg-cover rounded-l-lg">
+            <img
+              src="dist/img/pbb.png"
+              alt="Logo UIF"
+              class="w-1/2 mx-auto my-12 flex justify-center items-center pt-48" />
+          </div>
+          <!-- Col -->
+          <div
+            class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
+            <h3 class="pt-4 text-2xl text-center">Submit FullPaper</h3>
+            <form
+              class="px-8 pt-6 pb-8 mb-4 bg-white rounded"
+              id="form_submition"
+              enctype="multipart/form-data"
+              onsubmit="return postFile(event)">
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Title
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="title"
+                  type="text"
+                  placeholder="Title"
+                  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Full Name
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="fullName"
+                  type="text"
+                  placeholder="name"
+                  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Institution
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="institution"
+                  type="text"
+                  placeholder="Institution"
+                  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Email
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Subteam
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="subteam"
+                  type="text"
+                  placeholder="Subteam"
+                  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Student Id
+                </label>
+                <input
+                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  type="file"
+                  id="student_id"
+                  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Bukti Transfer
+                </label>
+                <input
+                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  type="file"
+                  id="bukti_transfer"
+                  required />
+              </div>
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Full Paper
+                </label>
+                <input
+                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  type="file"
+                  id="fullPaper"
+                  required />
+              </div>
+              <div class="mb-6 text-center">
+                <button
+                  class="w-full px-4 py-2 font-bold text-dark bg-blue-300 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                  type="submit"
+                  id="button">
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="bg-indigo-500 ..."
+                  id="loading"
+                  disabled>
+                  <svg
+                    class="animate-spin h-5 w-5 mr-3 ..."
+                    viewBox="0 0 24 24">
+                    <!-- ... -->
+                  </svg>
+                  Processing...
+                </button>
+              </div>
+            </form>
+            <div
+              class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+              role="alert"
+              id="error"></div>
+          </div>
         </div>
-        <!--        &lt;!&ndash; end tools &ndash;&gt;-->
-        <!--        &lt;!&ndash; blog start &ndash;&gt;-->
-        <!--        <section id="blog" class="pt-36 pb-32 bg-slate-200">-->
-        <!--            <div class="container">-->
-        <!--                <div class="w-full px-4">-->
-        <!--                    <div class="max-w-xl mx-auto text-center mb-16">-->
-        <!--                        <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>-->
-        <!--                        <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Tulisan Terkini</h2>-->
-        <!--                        <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, accusantium.</p>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="flex flex-wrap">-->
-        <!--                    <div class="w-full px-4 lg:w-1/2 xl:w-1/3">-->
-        <!--                        <div class="bg-white rounded-xl shadows-lg overflow-hidden mb-10">-->
-        <!--                            <img src="https://source.unsplash.com/360x200?programming" alt="programming" class="w-full"/>-->
-        <!--                            <div class="py-8 px-6">-->
-        <!--                                <h3>-->
-        <!--                                    <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary">Tips Belajar Programming</a>-->
-        <!--                                </h3>-->
-        <!--                                <p class=" text-secondary font-medium text-base mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dicta?</p>-->
-        <!--                                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80"> Baca selengkapnya </a>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <div class="w-full px-4 lg:w-1/2 xl:w-1/3">-->
-        <!--                        <div class="bg-white rounded-xl shadows-lg overflow-hidden mb-10">-->
-        <!--                            <img src="https://source.unsplash.com/360x200?keyboard" alt="keyboard" class="w-full"/>-->
-        <!--                            <div class="py-8 px-6">-->
-        <!--                                <h3>-->
-        <!--                                    <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary">Tips Mechanical Keyboard</a>-->
-        <!--                                </h3>-->
-        <!--                                <p class=" text-secondary font-medium text-base mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dicta?</p>-->
-        <!--                                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80"> Baca selengkapnya </a>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <div class="w-full px-4 lg:w-1/2 xl:w-1/3">-->
-        <!--                        <div class="bg-white rounded-xl shadows-lg overflow-hidden mb-10">-->
-        <!--                            <img src="https://source.unsplash.com/360x200?ableton" alt="music" class="w-full"/>-->
-        <!--                            <div class="py-8 px-6">-->
-        <!--                                <h3>-->
-        <!--                                    <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary">Tips Ableton</a>-->
-        <!--                                </h3>-->
-        <!--                                <p class=" text-secondary font-medium text-base mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dicta?</p>-->
-        <!--                                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80"> Baca selengkapnya </a>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </section>  -->
-        <!--        &lt;!&ndash; blog end &ndash;&gt;-->
-
-        <!--        &lt;!&ndash; contact star &ndash;&gt;-->
-        <!--        <section id="contact" class="pt-36 pb-32 bg-white">-->
-        <!--            <div class="container">-->
-        <!--                <div class="w-full px-4">-->
-        <!--                    <div class="max-w-xl mx-auto text-center mb-16">-->
-        <!--                        <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>-->
-        <!--                        <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Hubungi Kami</h2>-->
-        <!--                        <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, accusantium.</p>-->
-        <!--                    </div>-->
-        <!--                </div>  -->
-        <!--                <form>-->
-        <!--                    <div class="w-full lg:w-2/3 lg:mx-auto">-->
-        <!--                        <div class="w-full px-4 mb-8">-->
-        <!--                            <label for="name" class="text-base font-bold text-primary">Nama</label>-->
-        <!--                            <input type="text" id="name" class="w-full bg-slate-300 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>-->
-        <!--                        </div>-->
-        <!--                        <div class="w-full px-4 mb-8">-->
-        <!--                            <label for="email" class="text-base font-bold text-primary">Email</label>-->
-        <!--                            <input type="text" id="email" class="w-full bg-slate-300 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>-->
-        <!--                        </div>-->
-        <!--                        <div class="w-full px-4 mb-8">-->
-        <!--                            <label for="message" class="text-base font-bold text-primary">Pesan</label>-->
-        <!--                            <textarea type="email" id="email" class="w-full bg-slate-300 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>-->
-        <!--                        </div>-->
-        <!--                        <div class="w-full px-4">-->
-        <!--                            <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </form>-->
-        <!--            </div>-->
-        <!--        </section> -->
-        <!-- contact end -->
+      </div>
+    </div>
 
     <footer class="bg-footer pt-12 pb-6">
         <div class="container">
@@ -254,6 +221,79 @@
     </footer>
 
     <!-- footer end -->
-    <script src="dist/js/script.js"></script>
-    </body>
-</html> 
+    <script>
+      var url = "https://gxoib8zz.directus.app/files";
+      var student_id = $("#student_id");
+      var bukti_transfer = $("#bukti_transfer");
+      var fullPaper = $("#fullPaper");
+      $("#loading").hide();
+      $("#error").hide();
+
+      function postFile(e) {
+        e.preventDefault();
+        $("#loading").show();
+        $("#button").hide();
+        var data = {
+          title: $("#title").val(),
+          fullName: $("#fullName").val(),
+          institution: $("#institution").val(),
+          subteam: $("#subteam").val(),
+          email: $("#email").val(),
+        };
+
+        var dataCancel = [];
+
+        var formData = new FormData();
+        // bagian student_id
+        formData.append("student_id", student_id[0].files[0]);
+
+        // bagian bukti_transfer
+        formData.append("bukti_transfer", bukti_transfer[0].files[0]);
+
+        // bagian fullPaper
+        formData.append("fullPaper", fullPaper[0].files[0]);
+
+        axios
+          .post(url, formData)
+          .then(function (response) {
+            data.student_id = response.data.data[0].id;
+            dataCancel = response.data.data[0].id;
+            data.bukti_transfer = response.data.data[1].id;
+            dataCancel = response.data.data[1].id;
+            data.fullPaper = response.data.data[2].id;
+            dataCancel = response.data.data[2].id;
+            console.log("data", data);
+            console.log("response", response);
+            axios
+              .post("https://gxoib8zz.directus.app/items/submition", data)
+              .then(function (response) {
+                console.log("response", response);
+                $("#loading").hide();
+                $("#button").show();
+                alert("Data berhasil dikirim");
+                $("#error").show();
+                $("#error")
+                  .html("Thank you for registering ")
+                  .append(
+                    '<i class="fas fa-check-circle"></i>' +
+                      '<a href="index.html" class="font-bold text-primary">Go To Home Page</a>'
+                  );
+              })
+              .catch(function (error) {
+                console.log("error", error);
+                axios.delete(
+                  "https://gxoib8zz.directus.app/files/" + dataCancel
+                );
+                $("#loading").hide();
+                $("#button").show();
+                $("#error").show();
+                $("#error").html(error.response.data.errors[0].message);
+              });
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+    </script>
+  </body>
+</html>

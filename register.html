@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Comatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UIF | About</title>
+    <title>UIF | Register</title>
     <link rel="icon" type="image" href="dist/img/design/Logo_UIF/favicon.ico" />
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
@@ -125,6 +125,18 @@
                   type="submit">
                   Register !
                 </button>
+                <button
+                  type="button"
+                  class="bg-indigo-500 ..."
+                  id="loading"
+                  disabled>
+                  <svg
+                    class="animate-spin h-5 w-5 mr-3 ..."
+                    viewBox="0 0 24 24">
+                    <!-- ... -->
+                  </svg>
+                  Processing...
+                </button>
               </div>
             </form>
 <!--            <div-->
@@ -202,9 +214,13 @@
       var phone = $("#phone");
       var choose_day = $("#choose_day");
       var url = "https://gxoib8zz.directus.app/items/register";
+      $("#loading").hide();
+      $("#error").hide();
 
       function handleRequest(e) {
         e.preventDefault();
+        $("#loading").show();
+        $("#button").hide();
         axios
           .post(url, {
             email: email.val(),
@@ -216,6 +232,8 @@
           })
           .then(function (response) {
             console.log(response);
+            $("#loading").hide();
+            $("#button").show();
             firstName.val("");
             lastName.val("");
             email.val("");
@@ -223,6 +241,7 @@
             phone.val("");
             choose_day.val("");
             alert("Terima kasih sudah mendaftar");
+            $("#error").show();
             $("#error")
               .html("Thank you for registering ")
               .append(
@@ -232,6 +251,9 @@
           })
           .catch(function (error) {
             console.log(error.response);
+            $("#loading").hide();
+            $("#button").show();
+            $("#error").show();
             if (error.response.data.errors[0].message.includes("starts_with")) {
               $("#error").html("'Phone' must start with '08'");
             } else {
