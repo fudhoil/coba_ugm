@@ -1329,8 +1329,20 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@keyframes movement{
+  from{
+    opacity:0;
+    transform: translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
 body {
   font-family: sans-serif;
+  animation: movement 0.75s;
 }
 
 .navbar-fixed {
