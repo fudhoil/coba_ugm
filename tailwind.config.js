@@ -11,6 +11,7 @@ module.exports = {
         Roboto: ['Roboto', 'sans-serif'],
         Montserrat: ['Montserrat', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
+        adelia: ["ADELIA", "serif"],
       },
       colors: {
         primary: '#0ea5e9',
