@@ -1,26 +1,35 @@
 module.exports = {
-  content: ["./public/**/*.{html,js}", "index.html","cew.html","academic_forum","about.html","register.html","submition.html"],
+  content: [
+    "./public/**/*.{html,js}",
+    "index.html",
+    "cew.html",
+    "academic_forum",
+    "about.html",
+    "register.html",
+    "submition.html",
+  ],
   theme: {
-    container:{
+    container: {
       center: true,
-      padding: '16px',
+      padding: "16px",
     },
     extend: {
-      fontFamily:{
+      fontFamily: {
         Lora: "'Lora', serif",
-        Roboto: ['Roboto', 'sans-serif'],
-        Montserrat: ['Montserrat', 'sans-serif'],
-        Poppins: ['Poppins', 'sans-serif'],
+        Roboto: ["Roboto", "sans-serif"],
+        Montserrat: ["Montserrat", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"],
+        Friz: "Friz Quadrata Std",
       },
       colors: {
-        primary: '#0ea5e9',
-        dark: '#1e293b',
-        secondary: '#64748b',
-        abu: '#7e4600',
-        footer: '#1c2f41',
+        primary: "#0ea5e9",
+        dark: "#1e293b",
+        secondary: "#64748b",
+        abu: "#7e4600",
+        footer: "#1c2f41",
       },
-      screens:{
-        '2xl': '1320px',
+      screens: {
+        "2xl": "1320px",
       },
     },
   },
