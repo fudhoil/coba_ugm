@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face{
-        Font-family: "Friz";
-        src: url("public/fonts/Friz/friz-quadrata-std-bold.otf") format("otf");
-    }
-}
-
 @keyframes movement{
     from{
         opacity:0;
