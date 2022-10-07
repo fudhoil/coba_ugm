@@ -26,7 +26,7 @@ module.exports = {
         dark: "#1e293b",
         secondary: "#64748b",
         abu: "#7e4600",
-        footer: "#1c2f41",
+        footer: "#162332",
       },
       screens: {
         "2xl": "1320px",

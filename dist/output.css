@@ -932,17 +932,12 @@ video {
 
 .bg-footer{
   --tw-bg-opacity: 1;
-  background-color: rgb(28 47 65 / var(--tw-bg-opacity));
+  background-color: rgb(22 35 50 / var(--tw-bg-opacity));
 }
 
 .bg-orange-500{
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-}
-
-.bg-slate-700{
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
 .bg-slate-200{
@@ -958,6 +953,11 @@ video {
 .bg-slate-300{
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
 .bg-gray-200{
@@ -989,6 +989,10 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-t{
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
 .from-indigo-900{
   --tw-gradient-from: #312e81;
   --tw-gradient-to: rgb(49 46 129 / 0);
@@ -1013,12 +1017,34 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-footer{
+  --tw-gradient-from: #162332;
+  --tw-gradient-to: rgb(22 35 50 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-dark{
+  --tw-gradient-from: #1e293b;
+  --tw-gradient-to: rgb(30 41 59 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-blue-900{
+  --tw-gradient-from: #1e3a8a;
+  --tw-gradient-to: rgb(30 58 138 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-orange-500{
   --tw-gradient-to: #f97316;
 }
 
 .to-blue-500{
   --tw-gradient-to: #3b82f6;
+}
+
+.to-footer{
+  --tw-gradient-to: #162332;
 }
 
 .bg-cover{
@@ -1104,6 +1130,11 @@ video {
   padding-right: 0.75rem;
 }
 
+.py-64{
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
 .pt-36{
   padding-top: 9rem;
 }
@@ -1168,16 +1199,16 @@ video {
   font-family: 'Lora', serif;
 }
 
+.font-Friz{
+  font-family: Friz Quadrata Std;
+}
+
 .font-mono{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .font-Poppins{
   font-family: Poppins, sans-serif;
-}
-
-.font-Friz{
-  font-family: Friz Quadrata Std;
 }
 
 .text-lg{
@@ -1429,6 +1460,11 @@ body {
 .hover\:bg-orange-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-500:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-blue-700:hover{
