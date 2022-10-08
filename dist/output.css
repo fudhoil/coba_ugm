@@ -1522,6 +1522,11 @@ body {
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
+.group:hover .group-hover\:text-blue-900{
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity));
+}
+
 @media (prefers-color-scheme: dark){
   .dark\:bg-red-200{
     --tw-bg-opacity: 1;
