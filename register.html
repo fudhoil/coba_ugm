@@ -148,10 +148,10 @@
                 >
               </div>
             </form>
-            <!--                        <div-->
-            <!--                          class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"-->
-            <!--                          role="alert"-->
-            <!--                          id="error"></div>-->
+            <div
+              class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+              role="alert"
+              id="error"></div>
           </div>
         </div>
       </div>
@@ -246,6 +246,22 @@
       var url = "https://gxoib8zz.directus.app/items/register";
       $("#loading").hide();
       $("#error").hide();
+      const cipher = (salt) => {
+        const textToChars = (text) =>
+          text.split("").map((c) => c.charCodeAt(0));
+        const byteHex = (n) => ("0" + Number(n).toString(16)).substr(-2);
+        const applySaltToChar = (code) =>
+          textToChars(salt).reduce((a, b) => a ^ b, code);
+
+        return (text) =>
+          text
+            .split("")
+            .map(textToChars)
+            .map(applySaltToChar)
+            .map(byteHex)
+            .join("");
+      };
+      const myCipher = cipher("aksd2344erd@");
 
       function handleRequest(e) {
         e.preventDefault();
@@ -259,6 +275,9 @@
             lastName: lastName.val(),
             phone: phone.val(),
             institution: institution.val(),
+            url_qrcode:
+              "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+              myCipher(email.val()),
           })
           .then(function (response) {
             console.log(response);
