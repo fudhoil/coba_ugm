@@ -20,6 +20,7 @@ module.exports = {
         Montserrat: ["Montserrat", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
         Friz: "Friz Quadrata Std",
+        Zen: ["Zen Antique Soft", "sans-serif"]
       },
       colors: {
         primary: "#0ea5e9",
