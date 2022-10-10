@@ -826,6 +826,14 @@ video {
   max-width: 90px;
 }
 
+.max-w-\[70px\]{
+  max-width: 70px;
+}
+
+.max-w-\[50px\]{
+  max-width: 50px;
+}
+
 .origin-top-left{
   transform-origin: top left;
 }
@@ -1244,8 +1252,8 @@ video {
   font-family: Montserrat, sans-serif;
 }
 
-.font-Friz{
-  font-family: Friz Quadrata Std;
+.font-Lora{
+  font-family: 'Lora', serif;
 }
 
 .font-Zen{
