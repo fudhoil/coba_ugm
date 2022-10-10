@@ -805,6 +805,14 @@ video {
   max-width: 90px;
 }
 
+.max-w-\[70px\]{
+  max-width: 70px;
+}
+
+.max-w-\[50px\]{
+  max-width: 50px;
+}
+
 .origin-top-left{
   transform-origin: top left;
 }
@@ -902,10 +910,6 @@ video {
   border-width: 1px;
 }
 
-.border-t{
-  border-top-width: 1px;
-}
-
 .border-slate-300{
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
@@ -914,11 +918,6 @@ video {
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.border-slate-700{
-  --tw-border-opacity: 1;
-  border-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
 .bg-white{
@@ -979,11 +978,6 @@ video {
 .bg-red-100{
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.bg-gray-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r{
@@ -1170,10 +1164,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.pt-12{
-  padding-top: 3rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -1186,24 +1176,12 @@ video {
   font-family: Montserrat, sans-serif;
 }
 
-.font-Friz{
-  font-family: Friz Quadrata Std;
-}
-
-.font-Zen{
-  font-family: Zen Antique Soft, sans-serif;
-}
-
 .font-Lora{
   font-family: 'Lora', serif;
 }
 
-.font-Poppins{
-  font-family: Poppins, sans-serif;
-}
-
-.font-mono{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+.font-Zen{
+  font-family: Zen Antique Soft, sans-serif;
 }
 
 .text-lg{
@@ -1457,19 +1435,9 @@ body {
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-cyan-900:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(22 78 99 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-blue-700:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .hover\:text-primary:hover{
