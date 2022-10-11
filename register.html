@@ -141,11 +141,13 @@
                 </button>
               </div>
               <div class="flex justify-center">
-                <a href="index.html"
-                   class="w-md px-4 py-2 font-bold text-center text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline">
-                  <img src="dist/img/logo_home.png"
-                       alt="Logo UIF"
-                       class="max-w-[50px]"/>
+                <a
+                  href="index.html"
+                  class="w-md px-4 py-2 font-bold text-center text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline">
+                  <img
+                    src="dist/img/logo_home.png"
+                    alt="Logo UIF"
+                    class="max-w-[50px]" />
                 </a>
               </div>
             </form>
@@ -236,7 +238,10 @@
     <!-- footer end -->
 
     <!-- <script src="dist/js/script.js"></script> -->
-    <script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
       var form = $("#form_register");
       var firstName = $("#firstName");
       var lastName = $("#lastName");
@@ -247,22 +252,6 @@
       var url = "https://gxoib8zz.directus.app/items/register";
       $("#loading").hide();
       $("#error").hide();
-      const cipher = (salt) => {
-        const textToChars = (text) =>
-          text.split("").map((c) => c.charCodeAt(0));
-        const byteHex = (n) => ("0" + Number(n).toString(16)).substr(-2);
-        const applySaltToChar = (code) =>
-          textToChars(salt).reduce((a, b) => a ^ b, code);
-
-        return (text) =>
-          text
-            .split("")
-            .map(textToChars)
-            .map(applySaltToChar)
-            .map(byteHex)
-            .join("");
-      };
-      const myCipher = cipher("aksd2344erd@");
 
       function handleRequest(e) {
         e.preventDefault();
@@ -276,9 +265,6 @@
             lastName: lastName.val(),
             phone: phone.val(),
             institution: institution.val(),
-            url_qrcode:
-              "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
-              myCipher(email.val()),
           })
           .then(function (response) {
             console.log(response);

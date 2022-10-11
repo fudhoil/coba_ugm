@@ -164,14 +164,16 @@
                   Processing...
                 </button>
               </div>
-                <div class="flex justify-center">
-                    <a href="index.html"
-                       class="w-md px-4 py-2 font-bold text-center text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline">
-                        <img src="dist/img/logo_home.png"
-                             alt="Logo UIF"
-                             class="max-w-[50px]"/>
-                    </a>
-                </div>
+              <div class="flex justify-center">
+                <a
+                  href="index.html"
+                  class="w-md px-4 py-2 font-bold text-center text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline">
+                  <img
+                    src="dist/img/logo_home.png"
+                    alt="Logo UIF"
+                    class="max-w-[50px]" />
+                </a>
+              </div>
             </form>
             <div
               class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
@@ -340,6 +342,44 @@
         });
       });
 
+      //qrcode dan send email
+      const cipher = (salt) => {
+        const textToChars = (text) =>
+          text.split("").map((c) => c.charCodeAt(0));
+        const byteHex = (n) => ("0" + Number(n).toString(16)).substr(-2);
+        const applySaltToChar = (code) =>
+          textToChars(salt).reduce((a, b) => a ^ b, code);
+
+        return (text) =>
+          text
+            .split("")
+            .map(textToChars)
+            .map(applySaltToChar)
+            .map(byteHex)
+            .join("");
+      };
+      const myCipher = cipher("aksd2344erd@");
+
+      function sendEmail(email, name) {
+        emailjs.init("bdOgiOZHYPdwJmOw_");
+        var templateParams = {
+          to_email: email,
+          from_name: "UGM | UIF",
+          to_name: name,
+        };
+        emailjs
+          .send("service_wt14onj", "template_grhzrbj", templateParams)
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+      }
+
+      //post data
       function postFile(e) {
         e.preventDefault();
         $("#loading").show();
@@ -354,6 +394,9 @@
             fullName: $("#fullname").val(),
             fullName2: $("#fullname2").val(),
             fullName3: $("#fullname3").val(),
+            url_qrcode:
+              "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+              myCipher($("#email").val()),
           };
         } else {
           var data = {
@@ -364,6 +407,9 @@
             fullName: $("#fullname").val(),
             fullName2: "",
             fullName3: "",
+            url_qrcode:
+              "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+              myCipher($("#email").val()),
           };
         }
 
@@ -393,6 +439,7 @@
             axios
               .post("https://gxoib8zz.directus.app/items/submition", data)
               .then(function (response) {
+                sendEmail($("#email").val(), $("#fullname").val());
                 console.log("response", response);
                 $("#loading").hide();
                 $("#button").show();
