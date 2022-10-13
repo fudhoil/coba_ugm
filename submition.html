@@ -195,12 +195,10 @@
                 </button>
                 <button
                   type="button"
-                  class="bg-indigo-500 ..."
+                  class="w-full px-4 py-2 font-bold text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline"
                   id="loading"
                   disabled>
-                  <svg
-                    class="animate-spin h-5 w-5 mr-3 ..."
-                    viewBox="0 0 24 24">
+                  <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
                     <!-- ... -->
                   </svg>
                   Processing...
@@ -302,6 +300,9 @@
     </footer>
 
     <!-- footer end -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       var url = "https://gxoib8zz.directus.app/files";
       var student_id = $("#student_id");
