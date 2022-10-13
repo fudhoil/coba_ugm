@@ -44,132 +44,147 @@
               id="form_submition"
               enctype="multipart/form-data"
               onsubmit="return postFile(event)">
+              <!--              FORM CATEGOTI-->
+              <div id="containerSubteam">
+                <label
+                  class="block mb-2 text-sm font-bold text-gray-700"
+                  for="Subteam">
+                  Category
+                </label>
+                <select
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
+                  id="subteam">
+                  <option value="Individual">Individual</option>
+                  <option value="Team" selected>Team</option>
+                </select>
+              </div>
+              <div class="flex">
+                <button
+                  class="ml-auto bg-green-400 mt-4 px-1 rounded add_field_button"
+                  id="btn-add">
+                  Add
+                </button>
+              </div>
 
-<!--              FORM CATEGOTI-->
-                <div id="containerSubteam">
-                    <label class="block mb-2 text-sm font-bold text-gray-700" for="Subteam">
-                      Category
-                    </label>
-                    <select class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
-                            id="subteam">
-                      <option value="Individual">Individual</option>
-                      <option value="Team" selected>Team</option>
-                    </select>
+              <div class="mb-4 input_fields_wrap">
+                <div class="flex">
+                  <label
+                    class="block mb-2 mr-4 text-sm font-bold text-gray-700"
+                    for="Full Name">
+                    Full Name
+                  </label>
                 </div>
                 <div class="flex">
-                    <button class="ml-auto bg-green-400 mt-4 px-1 rounded add_field_button" id="btn-add">
-                      Add
-                    </button>
+                  <span class="mr-4 rounded outline-md">1</span>
+                  <input
+                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    type="text"
+                    id="fullname" />
                 </div>
+              </div>
 
-                <div class="mb-4 input_fields_wrap">
-                    <div class="flex">
-                      <label class="block mb-2 mr-4 text-sm font-bold text-gray-700" for="Full Name">
-                        Full Name
-                      </label>
-                    </div>
-                    <div class="flex">
-                      <span class="mr-4 rounded outline-md">1</span>
-                      <input class="w-full px-3 py-2 mb-3 text-sm leading-tight
-                      text-gray-700 border rounded shadow appearance-none
-                      focus:outline-none focus:shadow-outline" type="text"
-                      id="fullname" />
-                    </div>
-                </div>
+              <!--              FORM EMAIL-->
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Email
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                  required />
+              </div>
 
-                <!--              FORM EMAIL-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700">
-                      Email
-                    </label>
-                    <input class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                            id="email"
-                            type="email"
-                            placeholder="Email"
-                            required />
-                </div>
+              <!--              FORM INSTITUTION-->
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Institution
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="institution"
+                  type="text"
+                  placeholder="Institution"
+                  required />
+              </div>
 
-                <!--              FORM INSTITUTION-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700">
-                      Institution
-                    </label>
-                    <input class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      id="institution"
-                      type="text"
-                      placeholder="Institution"
-                      required />
-                </div>
+              <!--              FORM STUDENT ID-->
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Student Id
+                </label>
+                <input
+                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  type="file"
+                  id="student_id"
+                  required />
+              </div>
+              <!--PERSONAL PHOTO-->
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Personal Photo
+                </label>
+                <input
+                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  type="file"
+                  id="personal_photo"
+                  required />
+              </div>
 
-<!--              FORM STUDENT ID-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700">
-                      Student Id
-                    </label>
-                    <input
-                      class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      type="file"
-                      id="student_id"
-                      required />
-                </div>
-                <!--PERSONAL PHOTO-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700">
-                        Personal Photo
-                    </label>
-                    <input class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                            type="file"
-                            id="personal_photo"
-                            required />
-                </div>
+              <!--PROOF OF PAYMENT-->
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Proof of Payment
+                </label>
+                <input
+                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  type="file"
+                  id="bukti_transfer"
+                  required />
+              </div>
+              <!--SUB THEME-->
+              <div class="mb-4">
+                <label
+                  class="block mb-2 text-sm font-bold text-gray-700"
+                  for="Subtheme">
+                  Sub Theme
+                </label>
+                <select
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
+                  id="subtheme">
+                  <option value="WTO Chairs Programme" selected>
+                    WTO Chairs Programme
+                  </option>
+                  <option value="Trade Labs">Trade Labs</option>
+                  <option value="Economic Circular">Economic Circular</option>
+                </select>
+              </div>
 
-                <!--PROOF OF PAYMENT-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700">
-                      Proof of Payment
-                    </label>
-                    <input class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      type="file"
-                      id="bukti_transfer"
-                      required />
-                </div>
-                <!--SUB THEME-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700"
-                            for="Subtheme">
-                        Sub Theme
-                    </label>
-                    <select class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
-                            id="choose_day">
-                        <option value="WTO Chairs Programme" selected>WTO Chairs Programme</option>
-                        <option value="Trade Labs">Trade Labs</option>
-                        <option value="Economic Circular">Economic Circular</option>
-                    </select>
-                </div>
+              <!--PAPER TITLE-->
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Paper Title
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  id="title"
+                  type="text"
+                  placeholder="Title"
+                  required />
+              </div>
 
-                <!--PAPER TITLE-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700">
-                      Paper Title
-                    </label>
-                    <input class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                            id="title"
-                            type="text"
-                            placeholder="Title"
-                            required />
-                </div>
-
-                <!--FULL PAPER-->
-                <div class="mb-4">
-                    <label class="block mb-2 text-sm font-bold text-gray-700">
-                      Full Paper
-                    </label>
-                    <input
-                      class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                      type="file"
-                      id="fullPaper"
-                      required />
-                </div>
+              <!--FULL PAPER-->
+              <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                  Full Paper
+                </label>
+                <input
+                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                  type="file"
+                  id="fullPaper"
+                  required />
+              </div>
 
               <div class="mb-6 text-center">
                 <button
@@ -290,6 +305,7 @@
     <script>
       var url = "https://gxoib8zz.directus.app/files";
       var student_id = $("#student_id");
+      var personal_photo = $("#personal_photo");
       var bukti_transfer = $("#bukti_transfer");
       var fullPaper = $("#fullPaper");
       $("#loading").hide();
@@ -446,6 +462,9 @@
         // bagian student_id
         formData.append("student_id", student_id[0].files[0]);
 
+        // bagian personal_photo
+        formData.append("personal_photo", personal_photo[0].files[0]);
+
         // bagian bukti_transfer
         formData.append("bukti_transfer", bukti_transfer[0].files[0]);
 
@@ -457,10 +476,12 @@
           .then(function (response) {
             data.student_id = response.data.data[0].id;
             dataCancel = response.data.data[0].id;
-            data.bukti_transfer = response.data.data[1].id;
+            data.personal_photo = response.data.data[1].id;
             dataCancel = response.data.data[1].id;
-            data.fullPaper = response.data.data[2].id;
+            data.bukti_transfer = response.data.data[2].id;
             dataCancel = response.data.data[2].id;
+            data.fullPaper = response.data.data[3].id;
+            dataCancel = response.data.data[3].id;
             console.log("data", data);
             console.log("response", response);
             axios
@@ -478,6 +499,7 @@
                 $("#fullname2").val("");
                 $("#fullname3").val("");
                 student_id.val("");
+                personal_photo.val("");
                 bukti_transfer.val("");
                 fullPaper.val("");
                 alert("Data berhasil dikirim");
