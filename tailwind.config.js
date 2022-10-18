@@ -3,7 +3,7 @@ module.exports = {
     "./public/**/*.{html,js}",
     "index.html",
     "cew.html",
-    "academic_forum",
+    "academic_forum.html",
     "about.html",
     "register.html",
     "submition.html",
@@ -34,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/aspect-ratio')],
+  plugins: [require('@tailwindcss/aspect-ratio'),require('tailwindcss-textshadow')],
 };
