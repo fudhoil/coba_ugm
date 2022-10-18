@@ -827,6 +827,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
 .self-end{
   align-self: flex-end;
 }
@@ -947,6 +951,16 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-sky-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1064,6 +1078,11 @@ video {
   padding-right: 0.25rem;
 }
 
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .pt-36{
   padding-top: 9rem;
 }
@@ -1146,6 +1165,10 @@ video {
 
 .indent-40{
   text-indent: 10rem;
+}
+
+.indent-16{
+  text-indent: 4rem;
 }
 
 .font-Montserrat{
@@ -1660,6 +1683,11 @@ body {
 
   .lg\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
