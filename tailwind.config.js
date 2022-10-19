@@ -20,7 +20,7 @@ module.exports = {
         Montserrat: ["Montserrat", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
         Friz: "Friz Quadrata Std",
-        Zen: ["Zen Antique Soft", "sans-serif"]
+        Zen: ["Zen Antique Soft", "sans-serif"],
       },
       colors: {
         primary: "#0ea5e9",
@@ -34,5 +34,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/aspect-ratio'),require('tailwindcss-textshadow')],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwindcss-textshadow"),
+    require("tailwind-scrollbar"),
+  ],
 };
