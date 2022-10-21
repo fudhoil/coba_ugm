@@ -1599,7 +1599,7 @@ body {
 }
 
 .sponsor {
-  background: linear-gradient(-45deg, #411000, #310014, #022433, #004435);
+  background: linear-gradient(-45deg, #00242c, #023b2d, #022433, #004435);
   background-size: 400% 400%;
   animation: gradient 25s ease infinite;
   height: 100%;
