@@ -1,5 +1,5 @@
 @import url("http://fonts.cdnfonts.com/css/friz-quadrata-std");
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:ital,wght@0,300;0,500;1,500&family=Poppins:wght@200;400&family=Zen+Antique+Soft&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:ital,wght@0,300;0,500;1,500&family=Poppins:wght@200;400&family=Zen+Antique+Soft&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,11 +50,11 @@ body {
   box-sizing: border-box;
   text-transform: uppercase;
   font-weight: 900;
-  font-family: "Open Sans","Source Sans Pro",Helvetica,sans-serif;
+  font-family: "Open Sans", "Source Sans Pro", Helvetica, sans-serif;
   font-size: 1em;
   letter-spacing: 1em;
   padding: 1rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -63,9 +63,8 @@ body {
     linear-gradient(white, white),
     linear-gradient(180deg, cornflowerblue, purple);*/
 
-  background-image:
-          linear-gradient(white, white),
-          linear-gradient(270deg, #00D7B9, #B95DD7 50%, #FFB367 100%);
+  background-image: linear-gradient(white, white),
+    linear-gradient(270deg, #00d7b9, #b95dd7 50%, #ffb367 100%);
 
   background-repeat: no-repeat;
   background-origin: padding-box, border-box;
@@ -73,9 +72,8 @@ body {
 }
 
 .animating {
-  background-image:
-          linear-gradient(white, white),
-          linear-gradient(180deg, cornflowerblue, purple 50%, cornflowerblue);
+  background-image: linear-gradient(white, white),
+    linear-gradient(180deg, cornflowerblue, purple 50%, cornflowerblue);
 
   background-repeat: no-repeat;
   background-size: 100% 100%, 100% 200%;
@@ -132,7 +130,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.4s;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   user-select: none;
   cursor: pointer;
   height: 50vh;
@@ -142,7 +140,7 @@ body {
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  border: 13px solid #3B344D;
+  border: 13px solid #3b344d;
 }
 .testimonials .item p {
   color: #000000;
@@ -160,7 +158,7 @@ body {
   width: 5px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #413B52;
+  background-color: #413b52;
   margin: 7px;
   transition-duration: 0.2s;
 }
@@ -232,32 +230,28 @@ body {
   z-index: 4;
 }
 
-
 /*background_animatinf*/
 
 .context {
   width: 100%;
   position: absolute;
-  top:50vh;
-
+  top: 50vh;
 }
 
-.context h1{
+.context h1 {
   text-align: center;
   color: #fff;
   font-size: 50px;
 }
 
-.area{
+.area {
   background: #4e54c8;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   width: 100%;
-  height:100%;
-
-
+  height: 100%;
 }
 
-.circles{
+.circles {
   position: absolute;
   top: 0;
   left: 0;
@@ -266,7 +260,7 @@ body {
   overflow: hidden;
 }
 
-.circles li{
+.circles li {
   position: absolute;
   display: block;
   list-style: none;
@@ -275,18 +269,16 @@ body {
   background: rgba(255, 255, 255, 0.2);
   animation: animate 25s linear infinite;
   bottom: -150px;
-
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
   left: 25%;
   width: 80px;
   height: 80px;
   animation-delay: 0s;
 }
 
-
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
   left: 10%;
   width: 20px;
   height: 20px;
@@ -294,14 +286,14 @@ body {
   animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
   left: 70%;
   width: 20px;
   height: 20px;
   animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
   left: 40%;
   width: 60px;
   height: 60px;
@@ -309,28 +301,28 @@ body {
   animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
   left: 65%;
   width: 20px;
   height: 20px;
   animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
   left: 75%;
   width: 110px;
   height: 110px;
   animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
   left: 35%;
   width: 150px;
   height: 150px;
   animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
   left: 50%;
   width: 25px;
   height: 25px;
@@ -338,7 +330,7 @@ body {
   animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
   left: 20%;
   width: 15px;
   height: 15px;
@@ -346,7 +338,7 @@ body {
   animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
   left: 85%;
   width: 150px;
   height: 150px;
@@ -354,45 +346,46 @@ body {
   animation-duration: 11s;
 }
 
-
-
 @keyframes animate {
-
-  0%{
+  0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
     border-radius: 0;
   }
 
-  100%{
+  100% {
     transform: translateY(-1000px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
   }
-
 }
 
 .head {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
 }
 .logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
   vertical-align: middle;
 }
 
 .inner-header {
-  width:100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.flexing { /*Flexbox for containers*/
+.flexing {
+  /*Flexbox for containers*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,25 +393,25 @@ body {
 }
 
 .waves {
-  position:relative;
+  position: relative;
   width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 .contenting {
-  position:relative;
-  height:5vh;
-  text-align:center;
+  position: relative;
+  height: 5vh;
+  text-align: center;
   background-color: white;
 }
 
 /* Animation */
 
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
@@ -438,31 +431,30 @@ body {
 }
 @keyframes move-forever {
   0% {
-    transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px, 0, 0);
   }
   100% {
-    transform: translate3d(85px,0,0);
+    transform: translate3d(85px, 0, 0);
   }
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height: 40px;
+    min-height: 40px;
   }
   .content {
-    height:30vh;
+    height: 30vh;
   }
   h1 {
-    font-size:24px;
+    font-size: 24px;
   }
 }
-
 
 .box {
   width: 40%;
   margin: 0 auto;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   padding: 35px;
   border: 2px solid #fff;
   border-radius: 20px/50px;
@@ -474,14 +466,14 @@ body {
   font-size: 1em;
   padding: 10px;
   color: #fff;
-  border: 2px solid #06D85F;
+  border: 2px solid #06d85f;
   border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
 .button:hover {
-  background: #06D85F;
+  background: #06d85f;
 }
 
 .overlay {
@@ -532,11 +524,11 @@ body {
   overflow: auto;
 }
 
-@media screen and (max-width: 700px){
-  .box{
+@media screen and (max-width: 700px) {
+  .box {
     width: 70%;
   }
-  .popup{
+  .popup {
     width: 70%;
   }
 }
