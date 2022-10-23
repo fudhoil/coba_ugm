@@ -88,6 +88,12 @@ body {
   animation: gradient 25s ease infinite;
   height: 100%;
 }
+.sponsorabout {
+  background: linear-gradient(-45deg, #2391a9, #00c493, #5eceee, #76ffe2);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100%;
+}
 
 @keyframes gradient {
   0% {
