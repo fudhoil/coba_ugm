@@ -1,301 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- component -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Comatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UIF | Submition</title>
-    <link rel="icon" type="image" href="dist/img/design/Logo_UIF/favicon.ico" />
-    <link href="dist/output.css" rel="stylesheet" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
-      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
-  </head>
-  <!-- component -->
-  <body
-    class="font-Montserrat bg-image bg-full bg-center"
-    style="background-image: url(dist/bg/bg10.png)">
-    <!-- Container -->
-    <div class="container mx-auto">
-      <div class="flex justify-center px-6 my-12">
-        <!-- Row -->
-        <div class="w-full xl:w-3/4 lg:w-11/12 flex justify-center">
-          <!-- Col -->
-          <div
-            class="w-full pt-36s flex justify-center h-auto bg-gradient-to-r from-cyan-500 to-blue-500 hidden lg:block lg:w-7/12 bg-cover rounded-l-lg">
-            <img
-              src="dist/img/design/Logo_UIF/logo.png"
-              alt="Logo UIF"
-              class="w-1/2 mx-auto my-12 flex justify-center py-64" />
-          </div>
-          <!-- Col -->
-          <div
-            class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-            <h3 class="pt-4 text-2xl text-center">Submit Full Paper</h3>
-            <form
-              class="px-8 pt-6 pb-8 mb-4 bg-white rounded"
-              id="form_submition"
-              enctype="multipart/form-data"
-              onsubmit="return postFile(event)">
-              <!--              FORM CATEGOTI-->
-              <div id="containerSubteam">
-                <label
-                  class="block mb-2 text-sm font-bold text-gray-700"
-                  for="Subteam">
-                  Category
-                </label>
-                <select
-                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
-                  id="subteam">
-                  <option value="Individual">Individual</option>
-                  <option value="Team" selected>Team</option>
-                </select>
-              </div>
-              <div class="flex">
-                <button
-                  class="ml-auto bg-blue-400 mt-4 px-2 py-1 text-white rounded-lg add_field_button"
-                  id="btn-add">
-                  Add
-                </button>
-              </div>
-
-              <div class="mb-4 input_fields_wrap">
-                <div class="flex">
-                  <label
-                    class="block mb-2 mr-4 text-sm font-bold text-gray-700"
-                    for="Full Name">
-                    Full Name
-                  </label>
-                </div>
-                <div class="flex">
-                  <span class="mr-4 rounded outline-md">1</span>
-                  <input
-                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                    type="text"
-                    id="fullname" />
-                </div>
-              </div>
-
-              <!--              FORM EMAIL-->
-              <div class="mb-4">
-                <label class="block mb-2 text-sm font-bold text-gray-700">
-                  Email
-                </label>
-                <input
-                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                  id="email"
-                  type="email"
-                  placeholder="Email"
-                  required />
-              </div>
-
-              <!--              FORM INSTITUTION-->
-              <div class="mb-4">
-                <label class="block mb-2 text-sm font-bold text-gray-700">
-                  Institution
-                </label>
-                <input
-                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                  id="institution"
-                  type="text"
-                  placeholder="Institution"
-                  required />
-              </div>
-
-              <!--              FORM STUDENT ID-->
-              <div class="mb-4">
-                <label class="block mb-2 text-sm font-bold text-gray-700">
-                  Student Id
-                </label>
-                <input
-                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                  type="file"
-                  id="student_id"
-                  required />
-              </div>
-              <!--PERSONAL PHOTO-->
-              <div class="mb-4">
-                <label class="block mb-2 text-sm font-bold text-gray-700">
-                  Personal Photo
-                </label>
-                <input
-                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                  type="file"
-                  id="personal_photo"
-                  required />
-              </div>
-
-              <!--PROOF OF PAYMENT-->
-              <div class="mb-4">
-                <label class="block mb-2 text-sm font-bold text-gray-700">
-                  Proof of Payment
-                </label>
-                <input
-                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                  type="file"
-                  id="bukti_transfer"
-                  required />
-              </div>
-              <!--SUB THEME-->
-              <div class="mb-4">
-                <label
-                  class="block mb-2 text-sm font-bold text-gray-700"
-                  for="Subtheme">
-                  Sub Theme
-                </label>
-                <select
-                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
-                  id="subtheme">
-                  <option value="WTO Chairs Programme" selected>
-                    WTO Chairs Programme
-                  </option>
-                  <option value="Trade Labs">Trade Labs</option>
-                  <option value="Economic Circular">Economic Circular</option>
-                </select>
-              </div>
-
-              <!--PAPER TITLE-->
-              <div class="mb-4">
-                <label class="block mb-2 text-sm font-bold text-gray-700">
-                  Paper Title
-                </label>
-                <input
-                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                  id="title"
-                  type="text"
-                  placeholder="Title"
-                  required />
-              </div>
-
-              <!--FULL PAPER-->
-              <div class="mb-4">
-                <label class="block mb-2 text-sm font-bold text-gray-700">
-                  Full Paper
-                </label>
-                <input
-                  class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                  type="file"
-                  id="fullPaper"
-                  required />
-              </div>
-
-              <div class="mb-6 text-center">
-                <button
-                  class="w-full px-4 py-2 font-bold text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline"
-                  type="submit"
-                  id="button">
-                  Submit
-                </button>
-                <button
-                  type="button"
-                  class="w-full px-4 py-2 font-bold text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline"
-                  id="loading"
-                  disabled>
-                  <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
-                    <!-- ... -->
-                  </svg>
-                  Processing...
-                </button>
-              </div>
-              <div class="flex justify-center">
-                <a
-                  href="index.html"
-                  class="w-md px-4 py-2 font-bold text-center text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline">
-                  <img
-                    src="dist/img/logo_home.png"
-                    alt="Logo UIF"
-                    class="max-w-[50px]" />
-                </a>
-              </div>
-            </form>
-            <div
-              class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
-              role="alert"
-              id="error"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="bg-footer pt-6 pb-6">
-      <div class="container">
-        <div class="w-full">
-          <div class="flex item-center justify-evenly mb-5">
-            <!-- youtube -->
-            <a
-              href="https://www.youtube.com/bintangkhatulistiwa"
-              target="_blank"
-              class="text-white">
-              Youtube
-            </a>
-            <!-- instagram -->
-            <a
-              href="https://www.instagram.com/ugmif2022/"
-              target="_blank"
-              class="text-white">
-              Instagram
-            </a>
-            <!-- linked in -->
-            <a
-              href="https://www.linkedin.com/in/ugm-international-forum-98112a251/?originalSubdomain=id"
-              target="_blank"
-              class="text-white">
-              LinkedIn
-            </a>
-          </div>
-          <div class="w-full px-4 pt-4">
-            <div class="max-w-xl mx-auto text-center mb-16">
-              <img
+<!-- component -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Comatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIF | Submition</title>
+  <link rel="icon" type="image" href="dist/img/design/Logo_UIF/favicon.ico" />
+  <link href="dist/output.css" rel="stylesheet" />
+  <script
+          src="https://code.jquery.com/jquery-3.6.1.min.js"
+          integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+          crossorigin="anonymous"></script>
+  <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+          integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+</head>
+<!-- component -->
+<body
+        class="font-Montserrat bg-image bg-full bg-center"
+        style="background-image: url(dist/bg/bg10.png)">
+<!-- Container -->
+<div class="container mx-auto">
+  <div class="flex justify-center px-6 my-12">
+    <!-- Row -->
+    <div class="w-full xl:w-3/4 lg:w-11/12 flex justify-center">
+      <!-- Col -->
+      <div
+              class="w-full pt-36s flex justify-center h-auto bg-gradient-to-r from-cyan-500 to-blue-500 hidden lg:block lg:w-7/12 bg-cover rounded-l-lg">
+        <img
                 src="dist/img/design/Logo_UIF/logo.png"
-                alt="masbin"
-                class="max-w-[100px] mx-auto" />
+                alt="Logo UIF"
+                class="w-1/2 mx-auto my-12 flex justify-center py-64" />
+      </div>
+      <!-- Col -->
+      <div
+              class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
+        <h3 class="pt-4 text-2xl text-center">
+          Submit Presentation Material
+        </h3>
+        <form
+                class="px-8 pt-6 pb-8 mb-4 bg-white rounded"
+                id="form_submition"
+                enctype="multipart/form-data"
+                onsubmit="return postFile(event)">
+          <!--              FORM CATEGOTI-->
+          <div id="containerSubteam">
+            <label
+                    class="block mb-2 text-sm font-bold text-gray-700"
+                    for="Subteam">
+              Category
+            </label>
+            <select
+                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
+                    id="subteam">
+              <option value="Individual">Individual</option>
+              <option value="Team" selected>Team</option>
+            </select>
+          </div>
+          <div class="flex">
+            <button
+                    class="ml-auto bg-blue-400 mt-4 px-2 py-1 text-white rounded-lg add_field_button"
+                    id="btn-add">
+              Add
+            </button>
+          </div>
+
+          <div class="mb-4 input_fields_wrap">
+            <div class="flex">
+              <label
+                      class="block mb-2 mr-4 text-sm font-bold text-gray-700"
+                      for="Full Name">
+                Full Name
+              </label>
+            </div>
+            <div class="flex">
+              <span class="mr-4 rounded outline-md">1</span>
+              <input
+                      class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                      type="text"
+                      id="fullname" />
             </div>
           </div>
-          <p class="font-medium text-xs text-sm text-slate-100 text-center">
-            Copyright ©
+
+          <!--              FORM EMAIL-->
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700">
+              Email
+            </label>
+            <input
+                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                    required />
+          </div>
+
+          <!--              FORM INSTITUTION-->
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700">
+              Institution
+            </label>
+            <input
+                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="institution"
+                    type="text"
+                    placeholder="Institution"
+                    required />
+          </div>
+
+          <!--              FORM STUDENT ID-->
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700">
+              Student Id
+            </label>
+            <input
+                    class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    type="file"
+                    id="student_id"
+                    required />
+          </div>
+          <!--PERSONAL PHOTO-->
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700">
+              Personal Photo
+            </label>
+            <input
+                    class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    type="file"
+                    id="personal_photo"
+                    required />
+          </div>
+
+          <!--PROOF OF PAYMENT-->
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700">
+              Proof of Payment
+            </label>
+            <input
+                    class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    type="file"
+                    id="bukti_transfer"
+                    required />
+          </div>
+          <!--SUB THEME-->
+          <div class="mb-4">
+            <label
+                    class="block mb-2 text-sm font-bold text-gray-700"
+                    for="Subtheme">
+              Sub Theme
+            </label>
+            <select
+                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow focus:outline-none focus:shadow-outline"
+                    id="subtheme">
+              <option
+                      value="Contemporary Political Development in Responding Demands in Post Pandemic World"
+                      selected>
+                Contemporary Political Development in Responding Demands in
+                Post Pandemic World
+              </option>
+              <option
+                      value="Transforming Climate Movement Through Education">
+                Transforming Climate Movement Through Education
+              </option>
+              <option
+                      value="Reconfiguring Trajectories of Industrial Development Through Digital Incorporation">
+                Reconfiguring Trajectories of Industrial Development Through
+                Digital Incorporation
+              </option>
+            </select>
+          </div>
+
+          <!--PAPER TITLE-->
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700">
+              Material Title
+            </label>
+            <input
+                    class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="title"
+                    type="text"
+                    placeholder="Title"
+                    required />
+          </div>
+
+          <!--FULL PAPER-->
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700">
+              Presentation Materials
+            </label>
+            <input
+                    class="form-control w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    type="file"
+                    id="fullPaper"
+                    required />
+          </div>
+
+          <div class="mb-6 text-center">
+            <button
+                    class="w-full px-4 py-2 font-bold text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline"
+                    type="submit"
+                    id="button">
+              Submit
+            </button>
+            <button
+                    type="button"
+                    class="w-full px-4 py-2 font-bold text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline"
+                    id="loading"
+                    disabled>
+              <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                <!-- ... -->
+              </svg>
+              Processing...
+            </button>
+          </div>
+          <div class="flex justify-center">
             <a
-              href="http://instagram.com/bintangkhatulistiwa_"
-              targer="_blank"
-              class="font-bold text-sky-300"
-              >UGM | UIF</a
-            >
-          </p>
+                    href="index.html"
+                    class="w-md px-4 py-2 font-bold text-center text-dark bg-blue-300 rounded-full hover:bg-cyan-900 hover:text-white focus:outline-none focus:shadow-outline">
+              <img
+                      src="dist/img/logo_home.png"
+                      alt="Logo UIF"
+                      class="max-w-[50px]" />
+            </a>
+          </div>
+        </form>
+        <div
+                class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+                role="alert"
+                id="error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-footer pt-6 pb-6">
+  <div class="container">
+    <div class="w-full">
+      <div class="flex item-center justify-evenly mb-5">
+        <!-- youtube -->
+        <a
+                href="https://www.youtube.com/bintangkhatulistiwa"
+                target="_blank"
+                class="text-white">
+          Youtube
+        </a>
+        <!-- instagram -->
+        <a
+                href="https://www.instagram.com/ugmif2022/"
+                target="_blank"
+                class="text-white">
+          Instagram
+        </a>
+        <!-- linked in -->
+        <a
+                href="https://www.linkedin.com/in/ugm-international-forum-98112a251/?originalSubdomain=id"
+                target="_blank"
+                class="text-white">
+          LinkedIn
+        </a>
+      </div>
+      <div class="w-full px-4 pt-4">
+        <div class="max-w-xl mx-auto text-center mb-16">
+          <img
+                  src="dist/img/design/Logo_UIF/logo.png"
+                  alt="masbin"
+                  class="max-w-[100px] mx-auto" />
         </div>
       </div>
-    </footer>
+      <p class="font-medium text-xs text-sm text-slate-100 text-center">
+        Copyright ©
+        <a
+                href="http://instagram.com/bintangkhatulistiwa_"
+                targer="_blank"
+                class="font-bold text-sky-300"
+        >UGM | UIF</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>
 
-    <!-- footer end -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-      var url = "https://gxoib8zz.directus.app/files";
-      var student_id = $("#student_id");
-      var personal_photo = $("#personal_photo");
-      var bukti_transfer = $("#bukti_transfer");
-      var fullPaper = $("#fullPaper");
-      $("#loading").hide();
-      $("#error").hide();
+<!-- footer end -->
+<script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  var url = "https://gxoib8zz.directus.app/files";
+  var student_id = $("#student_id");
+  var personal_photo = $("#personal_photo");
+  var bukti_transfer = $("#bukti_transfer");
+  var fullPaper = $("#fullPaper");
+  $("#loading").hide();
+  $("#error").hide();
 
-      $(document).ready(function () {
-        var max_fields = 3; //maximum input boxes allowed
-        var wrapper = $(".input_fields_wrap"); //Fields wrapper
-        var add_button = $(".add_field_button"); //Add button ID
-        var x = 1; //initlal text box count
+  $(document).ready(function () {
+    var max_fields = 3; //maximum input boxes allowed
+    var wrapper = $(".input_fields_wrap"); //Fields wrapper
+    var add_button = $(".add_field_button"); //Add button ID
+    var x = 1; //initlal text box count
 
-        $("#subteam").change(function () {
-          var subteam = $("#subteam").find(":selected").val();
-          if (subteam === "Team") {
-            x = 1;
-            $("#btn-add").show();
-            wrapper.html(`
+    $("#subteam").change(function () {
+      var subteam = $("#subteam").find(":selected").val();
+      if (subteam === "Team") {
+        x = 1;
+        $("#btn-add").show();
+        wrapper.html(`
             <div class="flex">
                   <label
                     class="block mb-2 mr-4 text-sm font-bold text-gray-700"
@@ -311,10 +323,10 @@
                     id=fullname />
                 </div>
                 `);
-          }
-          if (subteam === "Individual") {
-            $("#btn-add").hide();
-            wrapper.html(`
+      }
+      if (subteam === "Individual") {
+        $("#btn-add").hide();
+        wrapper.html(`
             <div class="flex">
                   <label
                     class="block mb-2 mr-4 text-sm font-bold text-gray-700"
@@ -329,184 +341,184 @@
                     id=fullname />
                 </div>
                 `);
-          }
-        });
+      }
+    });
 
-        $(add_button).click(function (e) {
-          //on add input button click
-          e.preventDefault();
-          if (x < max_fields) {
-            //max input box allowed
-            x++; //text box increment
-            $(wrapper).append(
-              `<div class="flex">
+    $(add_button).click(function (e) {
+      //on add input button click
+      e.preventDefault();
+      if (x < max_fields) {
+        //max input box allowed
+        x++; //text box increment
+        $(wrapper).append(
+                `<div class="flex">
                 <span class="mr-4 rounded outline-md">${x}</span>
                 <input
                     class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     type="text"
                     id='fullname${x}' />
                     <a href="#" class="bg-red-500 px-1 ml-2 mb-2 rounded remove_field">Remove</a></div>`
-            ); //add input box
-          }
-        });
+        ); //add input box
+      }
+    });
 
-        $(wrapper).on("click", ".remove_field", function (e) {
-          //user click on remove text
-          e.preventDefault();
-          $(this).parent("div").remove();
-          x--;
-        });
-      });
+    $(wrapper).on("click", ".remove_field", function (e) {
+      //user click on remove text
+      e.preventDefault();
+      $(this).parent("div").remove();
+      x--;
+    });
+  });
 
-      //qrcode dan send email
-      const cipher = (salt) => {
-        const textToChars = (text) =>
-          text.split("").map((c) => c.charCodeAt(0));
-        const byteHex = (n) => ("0" + Number(n).toString(16)).substr(-2);
-        const applySaltToChar = (code) =>
-          textToChars(salt).reduce((a, b) => a ^ b, code);
+  //qrcode dan send email
+  const cipher = (salt) => {
+    const textToChars = (text) =>
+            text.split("").map((c) => c.charCodeAt(0));
+    const byteHex = (n) => ("0" + Number(n).toString(16)).substr(-2);
+    const applySaltToChar = (code) =>
+            textToChars(salt).reduce((a, b) => a ^ b, code);
 
-        return (text) =>
-          text
-            .split("")
-            .map(textToChars)
-            .map(applySaltToChar)
-            .map(byteHex)
-            .join("");
+    return (text) =>
+            text
+                    .split("")
+                    .map(textToChars)
+                    .map(applySaltToChar)
+                    .map(byteHex)
+                    .join("");
+  };
+  const myCipher = cipher("aksd2344erd@");
+
+  function sendEmail(email, name, qrcode) {
+    emailjs.init("bdOgiOZHYPdwJmOw_");
+    var templateParams = {
+      to_email: email,
+      from_name: "UGM | UIF",
+      to_name: name,
+      url_qrcode: qrcode,
+    };
+    emailjs
+            .send("service_wt14onj", "template_grhzrbj", templateParams)
+            .then(
+                    function (response) {
+                      console.log("SUCCESS!", response.status, response.text);
+                    },
+                    function (error) {
+                      console.log("FAILED...", error);
+                    }
+            );
+  }
+
+  //post data
+  function postFile(e) {
+    e.preventDefault();
+    $("#loading").show();
+    $("#button").hide();
+
+    if ($("#subteam").find(":selected").val() === "Team") {
+      var data = {
+        title: $("#title").val(),
+        institution: $("#institution").val(),
+        subteam: $("#subteam").find(":selected").val(),
+        subtheme: $("#subtheme").find(":selected").val(),
+        email: $("#email").val(),
+        fullName: $("#fullname").val(),
+        fullName2: $("#fullname2").val(),
+        fullName3: $("#fullname3").val(),
+        url_qrcode:
+                "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+                myCipher($("#email").val()),
       };
-      const myCipher = cipher("aksd2344erd@");
+    } else {
+      var data = {
+        title: $("#title").val(),
+        institution: $("#institution").val(),
+        subteam: $("#subteam").find(":selected").val(),
+        subtheme: $("#subtheme").find(":selected").val(),
+        email: $("#email").val(),
+        fullName: $("#fullname").val(),
+        fullName2: "",
+        fullName3: "",
+        url_qrcode:
+                "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+                myCipher($("#email").val()),
+      };
+    }
 
-      function sendEmail(email, name, qrcode) {
-        emailjs.init("bdOgiOZHYPdwJmOw_");
-        var templateParams = {
-          to_email: email,
-          from_name: "UGM | UIF",
-          to_name: name,
-          url_qrcode: qrcode,
-        };
-        emailjs
-          .send("service_wt14onj", "template_grhzrbj", templateParams)
-          .then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-            },
-            function (error) {
-              console.log("FAILED...", error);
-            }
-          );
-      }
+    var dataCancel = [];
 
-      //post data
-      function postFile(e) {
-        e.preventDefault();
-        $("#loading").show();
-        $("#button").hide();
+    var formData = new FormData();
+    // bagian student_id
+    formData.append("student_id", student_id[0].files[0]);
 
-        if ($("#subteam").find(":selected").val() === "Team") {
-          var data = {
-            title: $("#title").val(),
-            institution: $("#institution").val(),
-            subteam: $("#subteam").find(":selected").val(),
-            subtheme: $("#subtheme").find(":selected").val(),
-            email: $("#email").val(),
-            fullName: $("#fullname").val(),
-            fullName2: $("#fullname2").val(),
-            fullName3: $("#fullname3").val(),
-            url_qrcode:
-              "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
-              myCipher($("#email").val()),
-          };
-        } else {
-          var data = {
-            title: $("#title").val(),
-            institution: $("#institution").val(),
-            subteam: $("#subteam").find(":selected").val(),
-            subtheme: $("#subtheme").find(":selected").val(),
-            email: $("#email").val(),
-            fullName: $("#fullname").val(),
-            fullName2: "",
-            fullName3: "",
-            url_qrcode:
-              "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
-              myCipher($("#email").val()),
-          };
-        }
+    // bagian personal_photo
+    formData.append("personal_photo", personal_photo[0].files[0]);
 
-        var dataCancel = [];
+    // bagian bukti_transfer
+    formData.append("bukti_transfer", bukti_transfer[0].files[0]);
 
-        var formData = new FormData();
-        // bagian student_id
-        formData.append("student_id", student_id[0].files[0]);
+    // bagian fullPaper
+    formData.append("fullPaper", fullPaper[0].files[0]);
 
-        // bagian personal_photo
-        formData.append("personal_photo", personal_photo[0].files[0]);
-
-        // bagian bukti_transfer
-        formData.append("bukti_transfer", bukti_transfer[0].files[0]);
-
-        // bagian fullPaper
-        formData.append("fullPaper", fullPaper[0].files[0]);
-
-        axios
-          .post(url, formData)
-          .then(function (response) {
-            data.student_id = response.data.data[0].id;
-            dataCancel = response.data.data[0].id;
-            data.personal_photo = response.data.data[1].id;
-            dataCancel = response.data.data[1].id;
-            data.bukti_transfer = response.data.data[2].id;
-            dataCancel = response.data.data[2].id;
-            data.fullPaper = response.data.data[3].id;
-            dataCancel = response.data.data[3].id;
-            console.log("data", data);
-            console.log("response", response);
-            axios
-              .post("https://gxoib8zz.directus.app/items/submition", data)
-              .then(function (response) {
-                sendEmail(
-                  $("#email").val(),
-                  $("#fullname").val(),
-                  data.url_qrcode
-                );
-                console.log("response", response);
-                $("#loading").hide();
-                $("#button").show();
-                $("#title").val("");
-                $("#institution").val("");
-                $("#subteam").val("");
-                $("#subtheme").val("");
-                $("#email").val("");
-                $("#fullname").val("");
-                $("#fullname2").val("");
-                $("#fullname3").val("");
-                student_id.val("");
-                personal_photo.val("");
-                bukti_transfer.val("");
-                fullPaper.val("");
-                alert("Data berhasil dikirim");
-                $("#error").show();
-                $("#error")
-                  .html("Thank you for registering ")
-                  .append(
-                    '<i class="fas fa-check-circle"></i>' +
-                      '<a href="index.html" class="font-bold text-primary">Go To Home Page</a>'
-                  );
-              })
-              .catch(function (error) {
-                console.log("error", error);
-                axios.delete(
-                  "https://gxoib8zz.directus.app/files/" + dataCancel
-                );
-                $("#loading").hide();
-                $("#button").show();
-                $("#error").show();
-                $("#error").html(error.response.data.errors[0].message);
-              });
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      }
-    </script>
-  </body>
+    axios
+            .post(url, formData)
+            .then(function (response) {
+              data.student_id = response.data.data[0].id;
+              dataCancel = response.data.data[0].id;
+              data.personal_photo = response.data.data[1].id;
+              dataCancel = response.data.data[1].id;
+              data.bukti_transfer = response.data.data[2].id;
+              dataCancel = response.data.data[2].id;
+              data.fullPaper = response.data.data[3].id;
+              dataCancel = response.data.data[3].id;
+              console.log("data", data);
+              console.log("response", response);
+              axios
+                      .post("https://gxoib8zz.directus.app/items/submition", data)
+                      .then(function (response) {
+                        sendEmail(
+                                $("#email").val(),
+                                $("#fullname").val(),
+                                data.url_qrcode
+                        );
+                        console.log("response", response);
+                        $("#loading").hide();
+                        $("#button").show();
+                        $("#title").val("");
+                        $("#institution").val("");
+                        $("#subteam").val("");
+                        $("#subtheme").val("");
+                        $("#email").val("");
+                        $("#fullname").val("");
+                        $("#fullname2").val("");
+                        $("#fullname3").val("");
+                        student_id.val("");
+                        personal_photo.val("");
+                        bukti_transfer.val("");
+                        fullPaper.val("");
+                        alert("Data berhasil dikirim");
+                        $("#error").show();
+                        $("#error")
+                                .html("Thank you for registering ")
+                                .append(
+                                        '<i class="fas fa-check-circle"></i>' +
+                                        '<a href="index.html" class="font-bold text-primary">Go To Home Page</a>'
+                                );
+                      })
+                      .catch(function (error) {
+                        console.log("error", error);
+                        axios.delete(
+                                "https://gxoib8zz.directus.app/files/" + dataCancel
+                        );
+                        $("#loading").hide();
+                        $("#button").show();
+                        $("#error").show();
+                        $("#error").html(error.response.data.errors[0].message);
+                      });
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+  }
+</script>
+</body>
 </html>
