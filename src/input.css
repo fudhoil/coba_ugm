@@ -502,7 +502,7 @@ body {
   margin: 70px auto;
   padding-top: 20px;
   border-radius: 5px;
-  width: 5      0%;
+  width: 5 0%;
   position: relative;
   transition: all 5s ease-in-out;
 }
@@ -620,4 +620,14 @@ body {
 .tabset {
   max-width: 100%;
   padding: 1rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #f2f2f2;
 }
