@@ -305,25 +305,106 @@
 
        <div class="tabset">
            <!-- &lt;!&ndash; Tab 1 &ndash;&gt; -->
-           <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+           <input type="radio" name="tabset" id="tab1" aria-controls="budaya" checked>
            <label for="tab1">Budaya dan Pariwisata</label>
            <!-- &lt;!&ndash; Tab 2 &ndash;&gt; -->
-           <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+           <input type="radio" name="tabset" id="tab2" aria-controls="pangan">
            <label for="tab2">Pangan dan Kriya</label>
            <!-- &lt;!&ndash; Tab 3 &ndash;&gt; -->
-           <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+           <input type="radio" name="tabset" id="tab3" aria-controls="teknologi">
            <label for="tab3">Teknologi Inovasi Terapan</label>
            <!-- &lt;!&ndash; Tab 4 &ndash;&gt; -->
-           <input type="radio" name="tabset" id="tab4" aria-controls="dunkles">
+           <input type="radio" name="tabset" id="tab4" aria-controls="khusus">
            <label for="tab4">Khusus</label>
 
-           <!-- <div class="tab-panels">
-               <section id="marzen" class="tab-panel">
-                   <h2>6A. Märzen</h2>
-                   <p><strong>Overall Impression:</strong> An elegant, malty German amber lager with a clean, rich, toasty and bready malt flavor, restrained bitterness, and a dry finish that encourages another drink. The overall malt impression is soft, elegant, and complex, with a rich aftertaste that is never cloying or heavy.</p>
-                   <p><strong>History:</strong> As the name suggests, brewed as a stronger “March beer” in March and lagered in cold caves over the summer. Modern versions trace back to the lager developed by Spaten in 1841, contemporaneous to the development of Vienna lager. However, the Märzen name is much older than 1841; the early ones were dark brown, and in Austria the name implied a strength band (14 °P) rather than a style. The German amber lager version (in the Viennese style of the time) was first served at Oktoberfest in 1872, a tradition that lasted until 1990 when the golden Festbier was adopted as the standard festival beer.</p>
+           <div class="tab-panels">
+               <section id="budaya" class="tab-panel" style="overflow-x: auto;">
+                   <table style="width: 100%;  border-collapse: collapse;
+                   border-spacing: 0;">
+                       <thead>
+                       <tr>
+                           <th>No</th>
+                           <th colspan="2">Komunitas/Instansi</th>
+                           <th>Rencana Display Layanan/Produk</th>
+                           <th>Gambaran Produk/Layanan</th>
+                       </tr>
+                       </thead>
+                       <tbody id="table_body">
+                       <tr>
+                           <td>1</td>
+                           <td style="min-width: 10rem">
+                               <img src="
+                                    dist/cef/SALAM.png
+                                    " alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Yayasan Sanggar Anak Alam (SALAM)</p>
+                           </td>
+                           <td>Sampo, sabun mandi, sabun cuci piring, sabun cuci baju, pel lantai, sikat gigi bambu, cotton bud bambu, sikat kamar mandi sabut kelapa, dan bahan pangan lokal.</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+<!--                               <img src="" alt="gambar"/>-->
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/PSPD.png" alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Pusat Studi Perdagangan Dunia Universitas Gadjah Mada (PSPD UGM)</p>
+                           </td>
+                           <td>Brosur, kajian, portofolio hasil pelatihan IGPA, dan garam.</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+<!--                               <img src="" alt="gambar"/>-->
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/Pesantren_amumarta.jpg" alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Pesantren Amumarta</p>
+                           </td>
+                           <td>Publikasi tentang renewable energy (display koran), batik (sudah ada rangka display), dan produk serupa tanamu oil.</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+<!--                               <img src="" alt="gambar"/>-->
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>4</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/Jaringan_Masyarakat_Budaya_Nusantara.png" alt="gambar" width="80%"/>
+                           </td>
+                           <td>
+                               <p>Jaringan Masyarakat Budaya Nusantara </p>
+                           </td>
+                           <td>Buku, kajian, circular fesyen</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+                               <img src="dist/cef/Jaringan_Masyarakat_Budaya_Nusantara_1.jpg" alt="gambar"/>
+                               <img src="dist/cef/Jaringan_Masyarakat_Budaya_Nusantara_2.jpg" alt="gambar"/>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>5</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/PIAT_UGM.png" alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Pusat Inovasi Agroteknologi Universitas Gadjah Mada (PIAT UGM)</p>
+                           </td>
+                           <td>Buku saku masyarakat tangguh sampah, buku solusi pengelolaan sampah kota, produk hasil pengolahan sampah (kompos, produk maggot, produk olahan masker).</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+                               <img src="dist/cef/PIAT_UGM_1.jpg" alt="piat1"/>
+                               <img src="dist/cef/PIAT_UGM_2.jpg" alt="piat2"/>
+                               <img src="dist/cef/PIAT_UGM_3.jpg" alt="piat3"/>
+                           </td>
+                       </tr>
+
+                       </tbody>
+                   </table>
                </section>
-               <section id="rauchbier" class="tab-panel" style="overflow-x: auto;">
+               <section id="pangan" class="tab-panel" style="overflow-x: auto;">
                    <table style="width: 100%;  border-collapse: collapse;
                    border-spacing: 0;">
                         <thead>
@@ -338,178 +419,188 @@
                             <tr>
                                 <td>1</td>
                                 <td style="min-width: 10rem">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/Rumijo_Eco.jpg" alt="gambar"/>
                                 </td>
                                 <td>
                                     <p>Rumijo Eco Indonesia</p>
                                 </td>
                                 <td>Pasta gigi arang bambu, sabun mandi alami, sabun cuci tangan, piring dan pakaian, shampoo batang natural, lilin aroma terapi berbahan minyak jelantah, kaldu tempe, burger tempe, massage oil.</td>
                                 <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/Rumijo_Eco_1.jpg" alt="rumijo1"/>
+                                    <img src="dist/cef/Rumijo_Eco_2.jpg" alt="rumijo2"/>
+                                    <img src="dist/cef/Rumijo_Eco_3.jpg" alt="rumijo3"/>
+                                    <img src="dist/cef/Rumijo_Eco_4.jpg" alt="rumijo4"/>
+                                    <img src="dist/cef/Rumijo_Eco_5.jpg" alt="rumijo5"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td>2</td>
                                 <td style="min-width: 10rem">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/sc_logo.png" alt="gambar"/>
                                 </td>
                                 <td>
                                     <p>Strawberry Corps</p>
                                 </td>
                                 <td>Fermented Strawberry Juice, Strawberry Cookies, Strawberry Dried Fruit, Strawberry Powder, Strawberry Chips, Vermicompost</td>
                                 <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/sc1.jpg" alt="sc1"/>
+                                    <img src="dist/cef/sc2.jpg" alt="sc2"/>
+                                    <img src="dist/cef/sc3.jpg" alt="sc3"/>
+                                    <img src="dist/cef/sc4.jpg" alt="sc4"/>
+                                    <img src="dist/cef/sc5.jpg" alt="sc5"/>
+                                    <img src="dist/cef/sc6.jpg" alt="sc6"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td>3</td>
                                 <td style="min-width: 10rem">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/sp.jpg" alt="gambar"/>
                                 </td>
                                 <td>
                                     <p>Sriti Production</p>
                                 </td>
                                 <td>Figura, tempat tissue, box</td>
                                 <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/sp1.jpg" alt="sp1"/>
+                                    <img src="dist/cef/sp2.jpg" alt="sp2"/>
+                                    <img src="dist/cef/sp3.jpg" alt="sp3"/>
+
                                 </td>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td>4</td>
                                 <td style="min-width: 10rem">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/mimpi.png" alt="gambar"/>
                                 </td>
                                 <td>
                                     <p>MIMPI</p>
                                 </td>
                                 <td>Tas canvas bahan katun.</td>
                                 <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/mimpi1.jpg" alt="mimpi1"/>
+                                    <img src="dist/cef/mimpi2.jpg" alt="mimpi2"/>
+                                    <img src="dist/cef/mimpi3.jpg" alt="mimpi3"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td>5</td>
                                 <td style="min-width: 10rem">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                </td>
-                                <td>
-                                    <p>MIMPI</p>
-                                </td>
-                                <td>Tas canvas bahan katun.</td>
-                                <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td style="min-width: 10rem">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/BakulCraft.jpg" alt="gambar"/>
                                 </td>
                                 <td>
                                     <p>BakulCraft</p>
                                 </td>
                                 <td>Rajutan, eco stuff, tiedye pewarna alami</td>
                                 <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/BakulCraft1.jpg" alt="bc1"/>
+                                    <img src="dist/cef/BakulCraft2.jpg" alt="bc2"/>
+                                    <img src="dist/cef/BakulCraft3.jpg" alt="bc3"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td>6</td>
                                 <td style="min-width: 10rem">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/wk.jpg" alt="wk"/>
                                 </td>
                                 <td>
                                     <p>Warung Ji'Ko Ubud</p>
                                 </td>
                                 <td>Aneka vegan cookies</td>
                                 <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
-                                    <img src="
-                                    https://www.picsum.photos/200/200
-                                    " alt="gambar"/>
+                                    <img src="dist/cef/wk1.jpg" alt="wk"/>
                                 </td>
                             </tr>
                         </tbody>
                    </table>
                </section>
-               <section id="dunkles" class="tab-panel">
-                   <h2>6C. Dunkles Bock</h2>
-                   <p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes the malty-rich and somewhat toasty qualities of continental malts without being sweet in the finish.</p>
-                   <p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>
+               <section id="teknologi" class="tab-panel" style="overflow-x: auto;">
+                   <table style="width: 100%;  border-collapse: collapse;
+                   border-spacing: 0;">
+                       <thead>
+                       <tr>
+                           <th>No</th>
+                           <th colspan="2">Komunitas/Instansi</th>
+                           <th>Rencana Display Layanan/Produk</th>
+                           <th>Gambaran Produk/Layanan</th>
+                       </tr>
+                       </thead>
+                       <tbody id="table_body">
+                       <tr>
+                           <td>1</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/best_hostel.jpg" alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Best Hostels Indonesia</p>
+                           </td>
+                           <td>Platform aplikasi ditampilkan, regenerative travel tips (ada versi cetak), promo.</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+<!--                               <img src="" alt="hostel"/>-->
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/Rapel.png" alt="rapel"/>
+                           </td>
+                           <td>
+                               <p>Rapel Indonesia</p>
+                           </td>
+                           <td>Leflet, video, alat peraga identitas Rapel</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+<!--                               <img src="" alt="rapel"/>-->
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>3</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/ss.jpg" alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Sekolah Sampah Ringas Trengginas</p>
+                           </td>
+                           <td>Eco-enzyme, pupuk cair, kerajinan daur ulang tas kresek, sabun minyak jelantah, seni instalasi (plastik dan kaleng bekas), batik ramah lingkungan, karya lukis dari plastik, patung dari B3.</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+                               <img src="dist/cef/ss1.jpg" alt="ss1"/>
+                               <img src="dist/cef/ss2.jpg" alt="ss2"/>
+                               <img src="dist/cef/ss3.jpg" alt="ss3"/>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>4</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/banyubening.png" alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Komunitas Banyu Bening</p>
+                           </td>
+                           <td>Instalasi alat konversi air hujan menjadi air siap konsumsi. dan produk turunan (pupuk).</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+                               <img src="dist/cef/banyubening1.jpg" alt="banyubening"/>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>5</td>
+                           <td style="min-width: 10rem">
+                               <img src="dist/cef/rumahkreatif.jpg" alt="gambar"/>
+                           </td>
+                           <td>
+                               <p>Rumah Kreativitas Jogja d"Shafira</p>
+                           </td>
+                           <td>-</td>
+                           <td style="display: flex; overflow-x: scroll; overflow-y: hidden; max-width: 20rem; gap: 1rem;">
+<!--                               <img src="" alt="bc1"/>-->
+                           </td>
+                       </tr>
+                       </tbody>
+                   </table>
                </section>
                <section id="dunkles" class="tab-panel">
-                   <h2>6C. Dunkles Bock</h2>
-                   <p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes the malty-rich and somewhat toasty qualities of continental malts without being sweet in the finish.</p>
-                   <p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>
+<!--                   <h2>6C. Dunkles Bock</h2>-->
+<!--                   <p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes the malty-rich and somewhat toasty qualities of continental malts without being sweet in the finish.</p>-->
+<!--                   <p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>-->
                </section>
-           </div> -->
+           </div>
 
        </div>
 
