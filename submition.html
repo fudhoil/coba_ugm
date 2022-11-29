@@ -94,6 +94,19 @@
                     id="fullname" />
                 </div>
               </div>
+              <a
+                class="remove_field text-white mx-2"
+                style="
+                  position: absolute;
+                  right: 0.7%;
+                  transform: translateY(-3.85rem);
+                "
+                hidden
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/128/6861/6861362.png"
+                  width="30rem"
+                  class="replaced-svg"
+              /></a>
 
               <!--              FORM EMAIL-->
               <div class="mb-4">
@@ -336,6 +349,7 @@
           }
           if (subteam === "Individual") {
             $("#btn-add").hide();
+            $(".remove_field").hide();
             wrapper.html(`
             <div class="flex">
                   <label
@@ -357,26 +371,30 @@
         $(add_button).click(function (e) {
           //on add input button click
           e.preventDefault();
+          $(".remove_field").show();
           if (x < max_fields) {
             //max input box allowed
             x++; //text box increment
             $(wrapper).append(
-              `<div class="flex">
+              `<div class="flex" id=remove${x}>
                 <span class="mr-4 rounded outline-md">${x}</span>
                 <input
                     class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     type="text"
                     id='fullname${x}' />
-                    <a href="#" class="px-1 ml-2 mb-2 rounded remove_field text-white"><img src="https://cdn-icons-png.flaticon.com/128/6861/6861362.png" width="39rem" class="replaced-svg"></a></div>`
+                    </div>`
             ); //add input box
           }
         });
 
-        $(wrapper).on("click", ".remove_field", function (e) {
+        $(".remove_field").on("click", function (e) {
           //user click on remove text
           e.preventDefault();
-          $(this).parent("div").remove();
+          $(`#remove${x}`).remove();
           x--;
+          if (x === 1) {
+            $(".remove_field").hide();
+          }
         });
       });
 
