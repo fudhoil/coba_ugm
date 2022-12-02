@@ -787,6 +787,10 @@ video {
   max-width: 50px;
 }
 
+.max-w-\[300px\]{
+  max-width: 300px;
+}
+
 .flex-shrink-0{
   flex-shrink: 0;
 }
@@ -1358,6 +1362,14 @@ video {
 
 .opacity-60{
   opacity: 0.6;
+}
+
+.opacity-30{
+  opacity: 0.3;
+}
+
+.opacity-90{
+  opacity: 0.9;
 }
 
 .shadow-lg{
